@@ -1,0 +1,68 @@
+.card-three {
+    padding: 20px;
+    cursor: pointer;
+  
+    &__title {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+  
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap; 
+  
+      @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+    .card-three__image{
+        transition: all 300ms;
+    }
+  
+    &__item {
+      flex: 1;
+      background-color: #fff;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.5s ease;
+  
+      .card-three-body {
+        overflow: hidden;
+      }
+  
+      &-title {
+        font-size: 13px;
+        margin: 10px 0;
+        color: #101010;
+        
+      }
+  
+      &__image {
+        width: 100%;
+        height: auto;
+ 
+      }
+  
+      &__description {
+        font-size: 14px;
+        color: #101010BF;
+      }
+  
+      &:hover {
+        .card-three__image {
+          transform: scale(1.1);
+        }
+        .card-three__item-title {
+          text-decoration: underline;
+        }
+      }
+    }
+  
+    &__texts {
+      padding: 10px;
+    }
+  }
+  

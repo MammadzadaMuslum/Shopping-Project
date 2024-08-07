@@ -1,0 +1,78 @@
+.card-two-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  box-sizing: border-box;
+  gap: 40px; /* Add some spacing between the cards */
+}
+
+.card-two {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  gap: 20px; /* Add some spacing between the image and text */
+}
+
+.card-two.reverse {
+  flex-direction: row-reverse;
+}
+
+.card-two-image {
+  flex: 1;
+  width: 50%;
+  height: auto;
+}
+
+.card-two-text {
+  text-align: left;
+  padding: 20px; /* Reduced padding for better layout */
+  flex: 1;
+}
+
+.card-two-h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px; /* Add spacing below the heading */
+}
+
+.card-two-p {
+  font-size: 14px;
+  margin-bottom: 20px; /* Add spacing below the paragraph */
+}
+
+.card-two-button {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease; /* Add transition for hover effect */
+}
+
+.card-two-button:hover {
+  background-color: darkgray;
+}
+
+@media (max-width: 768px) {
+  .card-two {
+    flex-direction: column;
+    text-align: center; /* Center text for mobile view */
+  }
+
+  .card-two.reverse {
+    flex-direction: column; /* Ensure reverse class also stacks vertically */
+  }
+
+  .card-two-image {
+    width: 100%;
+    margin-bottom: 20px; /* Add spacing below the image */
+  }
+
+  .card-two-text {
+    padding: 20px 0; /* Adjust padding for mobile view */
+  }
+}

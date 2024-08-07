@@ -1,0 +1,176 @@
+.card-four {
+  padding: 20px;
+  cursor: pointer;
+
+  &__title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
+  }
+
+  &__media {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    img, video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    padding: 20px;
+    text-align: left;
+
+    &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 10px;
+
+      &__rating {
+        color: #ff9800;
+      }
+
+      .card-four__name {
+        font-size: 18px;
+        font-weight: bold;
+
+        .verified {
+          color: #4caf50;
+          font-size: 14px;
+          margin-left: 5px;
+        }
+      }
+    }
+
+    .card-four__review {
+      font-size: 14px;
+      color: #555;
+      margin: 10px 0;
+    }
+
+    .card-four__product {
+      border-top: 1px solid #ebebeb;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-top: 20px;
+      margin-top: 20px;
+
+      .card-four__product-image {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 10px;
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      .card-four__product-image-hover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      .card-four__product-image-container:hover .card-four__product-image-hover {
+        opacity: 1;
+      }
+
+      .card-four__product-image-container:hover .card-four__product-image {
+        opacity: 0;
+      }
+
+      .card-four__product-info {
+        .card-four__product-name {
+          font-size: 14px;
+        }
+
+        .card-four__product-price {
+          font-size: 14px;
+          color: #888;
+        }
+      }
+    }
+  }
+}
+
+.benefits {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  padding: 20px;
+  gap: 10px;
+
+  .benefit {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f7f7f7;
+
+    .benefit__icon {
+      margin-bottom: 10px;
+    }
+
+    &__title {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    &__description {
+      font-size: 14px;
+      color: #101010BF;
+      padding: 0 40px;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+
+    .benefit {
+      padding: 10px 20px;
+
+      &__description {
+        padding: 0 20px;
+      }
+    }
+  }
+}

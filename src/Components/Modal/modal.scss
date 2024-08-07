@@ -1,0 +1,100 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    &.show {
+      opacity: 1;
+    }
+  }
+  
+  .modal-content {
+    background: white;
+    border-radius: 8px;
+    max-width: 700px;
+    width: 100%;
+    position: relative;
+    transform: scale(0.7);
+    transition: transform 0.5s ease;
+    &.show {
+      transform: scale(1);
+    }
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .modal-body {
+    
+    display: flex;
+    align-items: center;
+  }
+  
+  .modal-image {
+    width: 50%;
+    height: 326.66px;
+    background: lightgray;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  
+  .modal-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    width: 50%;
+    text-align: center;
+    padding: 0 30px;
+  
+    .modal-h2 {
+      font-size: 18px;
+      color: #101010;
+      font-weight: 500;
+    }
+  
+    .modal-p {
+      font-size: 14px;
+    }
+  
+    .modal-inp {
+      width: 290px;
+      padding: 10px;
+    }
+  }
+  
+  .subscribe-button {
+    background: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  .modal-overlay.show {
+    opacity: 1;
+  }
+  
+  .modal-content.show {
+    transform: scale(1);
+  }
+  

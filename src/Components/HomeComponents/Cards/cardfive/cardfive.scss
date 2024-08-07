@@ -1,0 +1,70 @@
+.cardfive {
+    padding-top: 20px;
+  
+    .cardfive-top-text {
+      text-align: center;
+  
+      h1 {
+        font-size: 28px;
+      }
+  
+      p {
+        color: #101010BF;
+        font-size: 14px;
+      }
+    }
+  
+    .cardfive-bottom {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(339px, 1fr));
+      gap: 5px;
+      padding: 10px 0;
+      cursor: pointer;
+  
+      .cardfive-item {
+        overflow: hidden;
+  
+        img,
+        video {
+          width: 100%;
+          height: 100%;
+          transition: all 1s;
+        }
+  
+        &:hover {
+          img,
+          video {
+            transform: scale(1.3);
+          }
+        }
+      }
+    }
+  
+    @media (max-width: 1024px) {
+      .cardfive-bottom {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .cardfive-bottom {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        justify-content: center;
+      }
+    }
+  
+    @media (max-width: 480px) {
+      .cardfive-top-text h1 {
+        font-size: 24px;
+      }
+  
+      .cardfive-top-text p {
+        font-size: 12px;
+      }
+  
+      .cardfive-bottom {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      }
+    }
+  }
+  

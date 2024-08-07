@@ -1,0 +1,66 @@
+.marquee-sale-container {
+    width: 100%;
+    background: #000;
+    color: #fff;
+    padding: 10px 0;
+    overflow: hidden;
+  }
+  
+  .marquee-sale-top,
+  .marquee-sale-bottom {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .marquee-sale-text {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0 20px;
+    color: gray;
+  }
+  
+  .marquee-sale-middle {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 0;
+   
+  }
+  
+  .marquee-sale-content {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0 100px;
+    border-left: 1px solid gray;
+  }
+  
+  .marquee-sale-content:first-child {
+    border-left: none;
+  }
+  
+  .marquee-sale-middle-mobile {
+    display: none;
+  }
+  
+  /* Mobile Responsive Styles */
+  @media (max-width: 768px) {
+    .marquee-sale-top,
+    .marquee-sale-bottom,
+    .marquee-sale-middle {
+      display: none;
+    }
+  
+    .marquee-sale-middle-mobile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 0;
+    }
+  
+    .marquee-sale-content-mobile {
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px 0;
+    }
+  }
+  
